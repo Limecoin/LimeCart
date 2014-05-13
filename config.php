@@ -7,14 +7,16 @@
 $shopName = "LimeCart Online LimeCoin Store";
 $currency = '[LC]'; //Currency sumbol or code
 $fee = 1; //Fees for admin, handling, etc...
-$adminEmail = "vual@coinfreaks.com";
+$adminEmail = "YOUREMAIL@WHERE.COM";
 $domain = "coinfreaks.com";
+$coldStorageAddress = "Lc7Gty6dyG9sBZj4n3vpBfZp7XreRJAJm8"; // Address for coins to be sent after transaction confirmation for security
+$mandrilApi = "GETYOUROWN-OR-THIS-WONT-WORK-ITS-FREE"; // API key for MAILCHIMP from Mandril, free 12,000 mails a month go sign up!
 
 // [DATABASE]
 //
 $db_username = 'USER';
 $db_password = 'PASS';
-$db_name = 'Limecart';
+$db_name = 'cart';
 $db_host = 'localhost';
 $mysqli = new mysqli($db_host, $db_username, $db_password,$db_name);
 
@@ -39,7 +41,12 @@ $displayLC_USD = True;
 //
 // [DEBUG]
 //
-$debug = False;
+$debug = False; //
+
+// [UPGRADE]
+//
+$versionCheck = True; // Site checks for new version, if found a email is sent to site admin
+$versionFile = "https://raw.githubusercontent.com/Limecoin/LimeCart/master/version.txt"; // Leave this, this is the file that is checked for new versions, security patches, etc
 
 // [DONATION]
 // One can remove this here, simple change to 0.0 or False, but consider this free open source software needs
