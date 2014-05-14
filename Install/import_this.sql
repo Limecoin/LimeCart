@@ -25,6 +25,7 @@ CREATE TABLE IF NOT EXISTS `orders` (
   `country` text NOT NULL,
   `state` text NOT NULL,
   `coin_address` text NOT NULL,
+  `email` text NOT NULL,
   `order_number` int(11) NOT NULL AUTO_INCREMENT,
   PRIMARY KEY (`order_number`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
@@ -40,6 +41,6 @@ INSERT INTO `products` (`id`, `product_code`, `product_name`, `product_desc`, `p
 
 
 INSERT INTO `orders` (`name`, `formatted_address`, `postal_code`, `sublocality`, `country_short`, `street_number`, `locality`, `country`, `state`, `coin_address`, `order_number`) VALUES
-('Scottie', 'some street somewhere the moon', '1337', 'suburb', 'AU' ,1 , 'Sydney','Australia', 'Tasmania', 'Lfxu6TjMXJsfSyce1ufWj2uVcoAALrRhmS', 0 ),
+('Scottie', 'some street somewhere the moon', '1337', 'suburb', 'AU' ,1 , 'Sydney','Australia', 'Tasmania', 'Lfxu6TjMXJsfSyce1ufWj2uVcoAALrRhmS','dev@coinfreaks.com', 0 ),
 
 ---
